@@ -19,7 +19,7 @@ jobs:
     - name: Install Dependencies
       run: |
         brew update
-        brew install cmake
+        brew install --formula cmake
 
     - name: Build SDL3 and SDL3_image
       run: |
