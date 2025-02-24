@@ -19,15 +19,9 @@ jobs:
     - name: Install Dependencies
       run: |
         brew update
-        brew install cmake  # only if you need a specific version
+        brew install cmake
 
     - name: Build SDL3 and SDL3_image
       run: |
         make deps
         make build
-
-    - name: Archive Build Artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: sdl3-mac-app
-        path: sdl3-mac-app.app
